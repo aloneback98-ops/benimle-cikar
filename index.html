@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Benimle çıkar mısın? 💕</title>
+  <title>Kardelen 💕</title>
   <style>
     body {
       font-family: "Comic Sans MS", cursive;
@@ -15,6 +15,8 @@
       justify-content: center;
       align-items: center;
       color: white;
+      position: relative;
+      overflow: hidden;
     }
     h1 {
       font-size: 2.5em;
@@ -37,13 +39,33 @@
       background-color: #444;
       color: white;
     }
+    .watermark {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-20deg);
+      font-size: 4em;
+      color: rgba(255,255,255,0.25);
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+      white-space: pre;
+      font-family: "Comic Sans MS", cursive;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+    }
   </style>
 </head>
 <body>
-  <h1>Benimle çıkar mısın? 💞</h1>
-  <div>
-    <button id="evet">Evet ❤️</button>
-    <button id="hayir">Hayır 😢</button>
+  <div class="watermark">kardelen ❤ enes</div>
+  <div class="content">
+    <h1>Kardelen 💞</h1>
+    <div>
+      <button id="evet">Evet ❤️</button>
+      <button id="hayir">Hayır 😢</button>
+    </div>
   </div>
 
   <script>
